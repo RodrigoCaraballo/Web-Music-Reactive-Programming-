@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/web-music/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/web-music/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/web-music",
+  "projects": {
+    "web-music": {
+      "type": "application",
+      "root": "apps/web-music",
+      "entryFile": "main",
+      "sourceRoot": "apps/web-music/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/web-music/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    }
+  }
+}
